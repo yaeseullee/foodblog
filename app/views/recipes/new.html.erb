@@ -1,0 +1,22 @@
+  <%= form_for @recipe do |f| %>  
+  <p>
+      <center><%= f.label :title %><br> </center>
+      <center><%= f.text_field :title %> </center>
+  </p>
+ <p>
+    <center><%= f.label :avatar %><br> </center>
+    <center><%= f.file_field :avatar %></center>
+  </p>
+   <p>
+      <center><%= f.label :ingredient %><br> </center>
+      <center><%= f.text_area :ingredient %> </center>
+  </p>
+  <p>
+      <center><%= f.label :instruction %><br> </center>
+      <center><%= f.text_area :instruction %> </center>
+  </p>
+ 
+  <p>
+      <center><%= f.submit %> </center>
+  </p>
+<% end %>

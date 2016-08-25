@@ -1,0 +1,58 @@
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">What I eat in a day
+                <small><%= link_to 'upload', new_recipe_path %></small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Projects Row -->
+    <% @recipes.each do |recipe| %>
+        <div class="col-md-6 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" <%=image_tag recipe.avatar%>
+            </a>
+            <h3>
+                <%=link_to recipe.title, recipe %>
+            </h3>
+            <p> <%=recipe.ingredient%> </p>
+            <%= link_to 'Delete', recipe_path(recipe), method: :delete, data: { confirm: 'Are you sure?'} %>
+        </div>
+        <%end%>
+    <!-- /.row -->
+    <hr>
+    
+    <!-- Footer -->
+    <footer class="text-center" style="clear:both;">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright@dessertforaday</p>
+                <nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+            </div>
+        </div><!-- /.row -->
+    </footer>
+
+</div>
