@@ -12,4 +12,9 @@
  *
  *= require_tree .
  *= require_self
- */
+.addre*/
+.brand {background-color: #000000; margin-left: 5}
+.address-bar{background-color: #000000; }
+.content-color {
+	color: #000000; font-size: 30px;font-family: "Times New Roman", Times, serif;
+}
